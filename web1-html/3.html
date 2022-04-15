@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WEB1 - JavaScript</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1><a href="index.html" style="color: black;">WEB</a></h1>
+    <input id="night_day2" type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if(this.value === 'night'){
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        var a_tag = document.querySelectorAll('a');
+            for(var i = 0; i < a_tag.length; i++){
+                a_tag[i].style.color='white';
+            }
+        this.value = 'day';
+        document.querySelector('#night_day2').value = 'day';
+    } else {
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        var a_tag = document.querySelectorAll('a');
+            for(var i = 0; i < a_tag.length; i++){
+                a_tag[i].style.color='black';
+            }
+        this.value = 'night';
+        document.querySelector('#night_day2').value = 'night';
+    }
+    ">
+    <div id="grid">
+        <ol>
+            <li><a href="1.html" style="color: black;">HTML</a></li>
+            <li><a href="2.html" style="color: black;">CSS</a></li>
+            <li><a href="3.html" style="color: black;">JavaScript</a></li>
+        </ol>
+        <div id="article">
+            <h2>JavaScript</h2>
+            <p>
+                <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" title="JavaScript specification" style="color: black;"> <u>JavaScript</u></a> often abbreviated JS, is a programming language that is one of the <strong>core technologies of the World Wide Web</strong>, alongside HTML and CSS!
+            </p>
+        </div>
+    </div>
+    <input id="night_day2" type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if(this.value === 'night'){
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        var a_tag = document.querySelectorAll('a');
+            for(var i = 0; i < a_tag.length; i++){
+                a_tag[i].style.color='white';
+            }
+        this.value = 'day';
+        document.querySelector('#night_day1').value = 'day';
+    } else {
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        var a_tag = document.querySelectorAll('a');
+            for(var i = 0; i < a_tag.length; i++){
+                a_tag[i].style.color='black';
+            }
+        this.value = 'night';
+        document.querySelector('#night_day1').value = 'night';
+    }
+    ">
+</body>
+</html>

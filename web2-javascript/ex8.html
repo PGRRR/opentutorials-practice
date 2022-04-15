@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Opentutorials</title>
+    <script>
+        var Links = {
+            setColor:function(color){
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+                alist[i].style.color = color;
+                i++;
+            }
+        }
+    }
+/*         function LinksSetColor(color){
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+                alist[i].style.color = color;
+                i++;
+            } */
+
+        
+        var Body = {
+            setColor:function(color){
+                document.querySelector('body').style.color = color;
+            }, // 객체의 프로퍼티와 프로퍼티를 구분할때 콤마
+            setBackgroundColor:function(color){
+                document.querySelector('body').style.backgroundColor = color;
+            }
+        }
+
+/*         function BodySetColor(color){
+            document.querySelector('body').style.color = color;
+        } */
+/*         function BodySetBackgroundColor(color){
+            document.querySelector('body').style.backgroundColor = color;
+        } */
+        function darkModeHandler(self){
+            var target = document.querySelector('body');
+            if(self.value === 'night'){
+                Body.setColor('white');
+                Body.setBackgroundColor('black');
+                self.value = 'day';
+                Links.setColor('powderblue');
+            } else {
+                Body.setColor('black');
+                Body.setBackgroundColor('white');
+                self.value = 'night';
+                Links.setColor('blue');
+                }
+            }
+    </script>
+</head>
+<body>
+    <h1>Loop & Array</h1>
+    <script>
+        var coworkers = ['1', '2', '3', '4', '5'];
+    </script>
+    <h2>Co workers</h2>
+    <input type="button" id="darkMode" value="night" onclick="
+        darkModeHandler(this);
+    ">
+    <ul>
+        <script>
+            var i = 0;
+            while(i < coworkers.length){
+            document.write('<li><a href="http://a.com/' + coworkers[i] + '">' + coworkers[i] + '</li>');
+            i++;
+            }
+        </script>
+    </ul>
+</body>
+</html>
